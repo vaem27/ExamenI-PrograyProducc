@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ExamenPrograYProducc
 {
-    abstract class trainMain
+    abstract class TrainMain
     {
         protected static readonly Random rnd = new Random();
         public int Id { get; }
@@ -15,7 +15,7 @@ namespace ExamenPrograYProducc
         public int Capacity => Wagons * CapacityW;
         public int Passengers { get; protected set; }
 
-        public trainMain(int id, int wagons, int capPerWagon)
+        public TrainMain(int id, int wagons, int capPerWagon)
         {
             this.Id = id;
             this.Wagons = wagons;
