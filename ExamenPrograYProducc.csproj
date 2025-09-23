@@ -45,8 +45,10 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TrainBasic.cs" />
     <Compile Include="TrainGame.cs" />
-    <Compile Include="trainMain.cs" />
+    <Compile Include="TrainMain.cs" />
+    <Compile Include="TrainPremium.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

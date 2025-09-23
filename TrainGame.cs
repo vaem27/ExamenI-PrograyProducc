@@ -10,7 +10,7 @@ namespace ExamenPrograYProducc
 {
     internal class TrainGame
     {
-        public List<trainMain> trains = new List<trainMain>();
+        public List<TrainMain> trains = new List<TrainMain>();
         private int money = 50;
         private const int costTicket = 3;
         public void GameTrain()
