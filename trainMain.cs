@@ -9,6 +9,7 @@ namespace ExamenPrograYProducc
     abstract class TrainMain
     {
         protected static readonly Random rnd = new Random();
+        public abstract string TrainName { get; }
         public int Id { get; }
         public int Wagons { get; set; }
         public int CapacityW { get; protected set; }
@@ -37,6 +38,8 @@ namespace ExamenPrograYProducc
         }
 
         public virtual string ShowData() =>
-            $"Id {Id} | Vagones {Wagons} | Cap {Capacity} | Pasajeros {Passengers}";
+            $"{GetType().Name} Id {Id} | Vagones {Wagons} | Cap {Capacity} | Pasajeros {Passengers}";
+        public virtual string ShowName() =>
+            $"{TrainName} Id {Id}";
     }
 }

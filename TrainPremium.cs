@@ -8,6 +8,8 @@ namespace ExamenPrograYProducc
 {
     internal class TrainPremium : TrainMain
     {
+        public override string TrainName => "[Tren Premium]";
+
         public TrainPremium(int id) : base(id, wagons: 2, capPerWagon: 45) { }
         public override (int boarded, int left) SimulateStation()
         {
@@ -17,6 +19,10 @@ namespace ExamenPrograYProducc
             int bonus = Math.Min(extra, space);
             Passengers += bonus;
             return (boarded + bonus, left);
+        }
+        public override string ShowData()
+        {
+            return $"[Tren Premium] Id: {Id} | Vagones: {Wagons} | Capacidad: {Capacity} | Pasajeros: {Passengers}";
         }
     }
 }
