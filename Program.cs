@@ -10,6 +10,8 @@ namespace ExamenPrograYProducc
     {
         static void Main(string[] args)
         {
+            TrainGame game = new TrainGame();
+            game.GameTrain();
         }
     }
 }
