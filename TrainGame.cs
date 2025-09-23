@@ -57,7 +57,7 @@ namespace ExamenPrograYProducc
             if (money < cost) { Console.WriteLine("No tienes dinero."); return; }
             money -= cost;
             int id = trains.Count == 0 ? 1 : trains[trains.Count - 1].Id + 1;
-            //trains.Add(new BasicTrain(id));
+            trains.Add(new TrainBasic(id));
             Console.WriteLine($"Tren comprado (Id {id}).");
         }
         void AddWagon()
@@ -65,7 +65,7 @@ namespace ExamenPrograYProducc
             const int cost = 15;
             Console.Write("Id tren: ");
             if (!int.TryParse(Console.ReadLine(), out int id)) { Console.WriteLine("Id inválido."); return; }
-            trainMain t = trains.Find(x => x.Id == id);
+            TrainMain t = trains.Find(x => x.Id == id);
             if (t == null) { Console.WriteLine("Tren no existe."); return; }
             if (money < cost) { Console.WriteLine("No tienes dinero."); return; }
             money -= cost;
@@ -76,7 +76,7 @@ namespace ExamenPrograYProducc
         {
             if (trains.Count == 0) { Console.WriteLine("No hay trenes."); return; }
             Console.WriteLine("Llegaste a una nueva estacion");
-            foreach (trainMain t in trains)
+            foreach (TrainMain t in trains)
             {
                 var (boarded, left) = t.SimulateStation();
                 int revenue = boarded * costTicket;
@@ -88,7 +88,7 @@ namespace ExamenPrograYProducc
         void ShowMyTrains()
         {
             if (trains.Count == 0) { Console.WriteLine("Sin trenes."); return; }
-            foreach (trainMain t in trains) Console.WriteLine(t.ShowData());
+            foreach (TrainMain t in trains) Console.WriteLine(t.ShowData());
         }
     }
 }
